@@ -1,1 +1,24 @@
 // Mixins in here
+
+.mixin(@pl,@pr){
+    padding-left: @pl;
+    padding-right: @pr;
+}
+.space(@ta,@dis){
+    text-align: @ta;
+    display:@dis;
+}
+.size(@font-size, @border-radius){
+    font-size: @font-size;
+    border-radius: @border-radius;
+}
+.btn{
+    background: @button-bg;
+    cursor: pointer;
+    padding: 10px;
+    color: @white;
+    .mixin(20, 20);
+    .space(center, inline-block);
+    .size(1.6rem, 10px);
+    }
+  
